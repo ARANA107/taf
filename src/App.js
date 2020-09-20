@@ -1,14 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>this is app!</h1>
-      <img style={{ width: "100px" }} src={"assets/images/car1.jpg"} alt="image" />
-    </div>
-  );
+import { Home } from './components/Home';
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Home />
+        </div>
+      </Router>
+
+    );
+  }
+
 }
 
 export default App;
